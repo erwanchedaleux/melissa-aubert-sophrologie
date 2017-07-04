@@ -55,4 +55,5 @@ Install procedure
 Deploy procedure
 --------------
 ***
-  * Just need to transfer the `web/` folder content to the root of your web server.
+  * Just need to transfer the `web/` folder content to the `www/` folder of your web server.
+  * And transfer the `app/` folder content to the root of your web server.
