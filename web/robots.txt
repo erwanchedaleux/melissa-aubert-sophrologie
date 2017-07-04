@@ -1,0 +1,6 @@
+User-Agent: *
+Disallow: /vendor
+Disallow: /plugins
+Disallow: /lib
+Disallow: /config
+Disallow: /content

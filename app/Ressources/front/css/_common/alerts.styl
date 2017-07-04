@@ -1,0 +1,65 @@
+/********************************/
+
+.smk-alert-content
+    position                     fixed
+    width                        360px
+    z-index                      2060
+
+.smk-alert-content-top-right
+    top                          20px
+    right                        20px
+
+.smk-alert
+    opacity                      0
+    padding                      10px
+    background-color             $backgroundSuccessColor
+    border                       1px solid lightness( $backgroundSuccessColor, 85% )
+    border-radius                5px
+
+    p
+        display                  table
+        color                    $successColor
+        font-size                1.3rem
+        line-height              1.6
+        font-1()
+
+    .close
+        float                    right
+        font-size                21px
+        font-weight              bold
+        line-height              1
+        color                    $color1
+        text-shadow              0 1px 0 $color2
+        opacity                  0.2
+        position                 relative
+        top                      0
+        right                    0
+        color                    $successColor
+        -webkit-appearance       none
+        padding                  0
+        cursor                   pointer
+        background               transparent
+        border                   0
+
+    .fa-check-circle
+        font-size                20px
+        float                    left
+        margin-right             14px
+        position                 relative
+        top                      1px
+        display                  inline-block
+        line-height              1
+        -webkit-font-smoothing   antialiased
+        -moz-osx-font-smoothing  grayscale
+        color                    $successColor
+
+
+/* Mediaqueries Mobile (1023px) */
+@media all and ( max-width: $largeScreenContentMinWidth )
+
+    .smk-alert-content
+        width                    auto
+        max-width                360px
+
+    .smk-alert-content-top-right
+        left                     20px

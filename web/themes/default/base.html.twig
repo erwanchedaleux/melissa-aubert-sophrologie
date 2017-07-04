@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+    {% set meta_title = '' %}
+
+    {% if is_front_page %}
+        {% set meta_title = 'Sophrologie, Relaxation, Sophrologue Paris' %}
+    {% elseif meta.title %}
+        {% set meta_title = meta.title %}
+    {% endif %}
+
+    <title>
+        {{ meta_title }} | {{ site_title }}
+    </title>
+
+    {% if meta.description %}
+        <meta name="description" content="{{ meta.description|striptags }}">
+    {% endif %}
+    {% if meta.robots %}
+        <meta name="robots" content="{{ meta.robots }}">
+    {% endif %}
+
+    {# OPENGRAPH #}
+    {% block opengraph_meta %}
+        <meta property="og:site_name" content="{{ site_title }}">
+        <meta property="og:locale" content="fr_FR">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ page.url }}">
+        <meta property="og:title" content="{{ meta_title }} | {{ site_title }}">
+        <meta property="og:description" content="{{ meta.description|striptags }}">
+        <meta property="og:image" content="">
+    {% endblock opengraph_meta %}
+
+    {# TWITTER #}
+    {% block twitter_meta %}
+        <meta name="twitter:card" content="sharing_twitter_card">
+        <meta name="twitter:site" content="@melissaAubertSophrologie">
+        <meta name="twitter:url" content="{{ page.url }}">
+        <meta name="twitter:title" content="{{ meta_title }} | {{ site_title }}">
+        <meta name="twitter:description" content="{{ meta.description|striptags }}">
+        <meta name="twitter:image" content="">
+    {% endblock twitter_meta %}
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileImage" content="{{ theme_url }}/assets/media/img/apple-touch-icon-114.png?v={{ config.version }}') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="shortcut icon" href="{{ theme_url }}/assets/media/img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="{{ theme_url }}/assets/media/img/apple-touch-icon-144.png?v={{ config.version }}" sizes="144x144">
+    <link rel="apple-touch-icon" href="{{ theme_url }}/assets/media/img/apple-touch-icon-114.png?v={{ config.version }}" sizes="114x114">
+    <link rel="apple-touch-icon" href="{{ theme_url }}/assets/media/img/apple-touch-icon-72.png?v={{ config.version }}" sizes="72x72">
+    <link rel="apple-touch-icon" href="{{ theme_url }}/assets/media/img/apple-touch-icon-57.png?v={{ config.version }}">
+
+    {# OLD BROWSER REDIRECT #}
+    {% block old_browser %}
+        <script>(function(){var a=document.documentElement;a&&(a.className=a.className.replace((new RegExp('(^|\\s)no-js(\\s|$)')),'$1js$2'));}());{% if app.debug %}var $$DEBUG$$=true;{% endif %}{% block redirect_javascripts %}window.OLD_BROWSER_URL='{{ base_url }}?old-browser';{% endblock redirect_javascripts %}</script>
+    {% endblock old_browser %}
+
+    {# INLINE STYLESHEETS #}
+    {% block inline_stylesheets %}
+        <style>{% include '/system/inlineCSS.css' %}</style>
+    {% endblock inline_stylesheets %}
+
+    {# STYLESHEETS #}
+    {% block stylesheets %}
+        {% if config.twig_config.debug %}
+            <link rel="stylesheet" href="{{ theme_url }}/assets/css/fonts.css?v={{ config.version }}">
+        {% endif %}
+        <link rel="preload" href="{{ theme_url }}/assets/css/styles.css?v={{ config.version }}" as="style" onload="this.rel='stylesheet';this.onload=''">
+        <noscript><link rel="stylesheet" href="{{ theme_url }}/assets/css/styles.css?v={{ config.version }}"></noscript>
+        <link rel="preload" href="{{ theme_url }}/assets/css/font-awesome.css?v={{ config.version }}" as="style" onload="this.rel='stylesheet';this.onload=''">
+        <noscript><link rel="stylesheet" href="{{ theme_url }}/assets/css/font-awesome.css?v={{ config.version }}"></noscript>
+        <link rel="preload" href="{{ theme_url }}/assets/css/fullpage.css?v={{ config.version }}" as="style" onload="this.rel='stylesheet';this.onload=''">
+        <noscript><link rel="stylesheet" href="{{ theme_url }}/assets/css/fullpage.css?v={{ config.version }}"></noscript>
+        {#<link rel="preload" href="{{ theme_url }}/assets/css/images.css?v={{ config.version }}" as="style" onload="this.rel='stylesheet';this.onload=''">
+        <noscript><link rel="stylesheet" href="{{ theme_url }}/assets/css/images.css?v={{ config.version }}"></noscript>#}
+    {% endblock stylesheets %}
+
+    {# INLINE JS #}
+    {% block inline_js %}
+        <script>
+            {% if config.twig_config.debug %}
+                {% include '/system/inlineJS-dev.js' %}
+            {% else %}
+                {% include '/system/inlineJS-prod.js' %}
+            {% endif %}
+        </script>
+    {% endblock inline_js %}
+
+    {# FONTS LOADING #}
+    {% if not config.twig_config.debug %}
+        <script>
+            window.siteStarter.getFile('{{ theme_url }}/assets/css/fonts.css?v={{ config.version }}');
+        </script>
+        <noscript><link rel="stylesheet" href="{{ theme_url }}/assets/css/fonts.css?v={{ config.version }}"></noscript>
+    {% endif %}
+
+    {# MAIN JAVACRIPTS #}
+    {% block main_javascripts %}
+        <script defer src="{{ theme_url }}/system/config.js?v={{ config.version }}"></script>
+        <script defer src="{{ theme_url }}/assets/js/main.js?v={{ config.version }}"></script>
+    {% endblock main_javascripts %}
+
+    {# HEAD JAVASCRIPTS #}
+    {% block head_javascripts %}
+        {% if config.twig_config.debug %}
+            <script defer src="{{ theme_url }}/assets/js/polyfill/promises.js?v={{ config.version }}"></script>
+            <script defer src="{{ theme_url }}/assets/js/polyfill/picturefill.js?v={{ config.version }}"></script>
+            <script defer src="{{ theme_url }}/assets/js/lib.js?v={{ config.version }}"></script>
+            <script defer src="{{ theme_url }}/assets/js/scripts.js?v={{ config.version }}"></script>
+        {% endif %}
+        {% block extra_head_javascripts '' %}
+    {% endblock head_javascripts %}
+</head>
+<body>
+    {% block body %}
+        {% block global_content '' %}
+    {% endblock body %}
+    {% if not config.twig_config.debug %}
+        {# Code Google Anlytics #}
+    {% endif %}
+</body>
+</html>
