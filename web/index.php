@@ -30,9 +30,11 @@ isset($email) && !empty($email) &&
 isset($message) && !empty($message)) {
 
 
-    $mailFrom       = 'contact@your-site.fr';
-    $mailTo         = 'your-adress@gmail.com';
-    $swiftTransport = Swift_SmtpTransport::newInstance('SSL0.OVH.NET', 587) ->setUsername('contact@your-site.fr') ->setPassword('XXXXXXX');
+    $mailFrom       = 'contact@melissa-aubert-sophrologie.fr';
+    $mailTo         = 'sophrologie.ma@gmail.com';
+    $password       = 'XXXXXXXXXXX';
+
+    $swiftTransport = Swift_SmtpTransport::newInstance('SSL0.OVH.NET', 587) ->setUsername($mailFrom) ->setPassword($password);
 
 
     // send email

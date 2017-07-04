@@ -3,15 +3,17 @@ module.exports = ( function ( $ ) {
 
     function init() {
 
-        var NavigationMobile,Fullpage, Form,
-            $navigationMobile, $fullpage, $forms;
+        var NavigationMobile,Fullpage, Tabs, Form,
+            $navigationMobile, $fullpage, $forms, $tabs;
 
         NavigationMobile                        = require( '../navigation-mobile.js' );
         Fullpage                                = require( '../fullpage.js' );
+        Tabs                                    = require( '../tabs.js' );
         Form                                    = require( '../form/validation.js' );
 
         $navigationMobile                       = $( '.site-navigation-mobile' );
         $fullpage                               = $( '.fullpage' );
+        $tabs                                   = $( '.tabs' );
         $forms                                  = $( '.forms' );
 
 
@@ -22,6 +24,14 @@ module.exports = ( function ( $ ) {
 
         if ( $fullpage ) {
             new Fullpage( $fullpage );
+
+        }
+
+        if ( $tabs.length ) {
+            $tabs.each( function( index, tab ) {
+                new Tabs( $( tab ) );
+
+            } );
 
         }
 

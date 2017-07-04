@@ -1,0 +1,108 @@
+/***************************************/
+
+.sc-accompaniments
+    position                            relative
+    width                               100%
+    height                              100vh
+    overflow                            hidden
+
+.sca-content
+    position                            absolute
+    z-index                             1
+    top                                 50%
+    left                                50%
+    transform                           translate( -50%, -50% )
+    width                               60%
+    min-width                           $innerWidth
+
+.sca-title-1
+    display                             block
+    margin-bottom                       45px
+    font-size                           4.5rem
+    color                               $color2
+    text-align                          center
+    text-transform                      uppercase
+    font-l()
+
+.sca-tabs
+    background-color                    $color2
+    box-shadow                          0 3px 30px 0 rgba( $color1, 0.5 )
+    min-height                          420px
+
+.sca-list
+    display                             table
+    height                              45px
+
+.sca-itm
+    display                             table-cell
+    width                               1%
+    color                               $color3
+    text-align                          center
+    text-transform                      uppercase
+    vertical-align                      middle
+    font-size                           2rem
+    background-color                    $color3
+    font-l()
+
+    &.active
+        background-color                $color2
+
+        .sca-lnk
+            color                       $color3
+
+.sca-lnk
+    color                               $color2
+
+.sca-tab
+    padding                             30px
+
+.sca-text
+    column-count                        2
+
+.sca-title-2
+    display                             block
+    margin-bottom                       25px
+    font-size                           1.6rem
+    color                               $color4
+    text-align                          center
+    text-transform                      uppercase
+    font-sb()
+
+.sca-tab_list
+    margin-bottom                       20px
+    color                               $color3
+    font-size                           1.3rem
+    line-height                         1.4
+    padding-right                       20px
+    break-inside                        avoid-column
+
+.sca-tab_itm
+    padding-left                        25px
+
+    &:before
+        content                         "\f105"
+        position                        relative
+        display                         inline
+        font-family                     "FontAwesome"
+        font-size                       1.6rem
+        color                           $color3
+        margin-left                     -10px
+
+    &.highlight
+        font-sbi()
+
+        &:before
+            content                         "\f18e"
+            position                        relative
+            display                         inline
+            font-family                     "FontAwesome"
+            font-size                       1.6rem
+            color                           $color4
+            font-style                      normal
+            margin-left                     -17px
+
+.sca-paragraph
+    margin-bottom                       20px
+    color                               $color3
+    font-size                           1.3rem
+    line-height                         1.4
