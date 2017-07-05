@@ -1,0 +1,80 @@
+/********************************/
+
+.forms
+    display                      block
+
+    .fields
+        position                 relative
+        min-height               45px
+        margin-bottom            15px
+
+    .field-select
+        position                 relative
+        overflow                 hidden
+        width                    100%
+        border-radius            0
+        cursor                   pointer
+
+        &:before
+            content                         "\f107"
+            position                        absolute
+            z-index                         1
+            top                             11px
+            right                           20px
+            margin-top                      2px
+            font-family                     "FontAwesome"
+            font-size                       2rem
+            color                           rgba( $color6, 0.6 )
+
+        .labels
+            display              none
+
+    .labels
+        color                    $color6
+        font-size                1.6rem
+        font-l()
+
+    .labels-placeholder
+        position                 absolute
+        z-index                  2
+        top                      23px
+        left                     13px
+        transform                translateY( -50% )
+        cursor                   text
+        pointer-events           none
+
+    .inputs
+        width                    100%
+        padding                  13px
+        background-color         $color2
+        border                   1px solid $color2
+        transition2()
+
+        &:hover
+            border-color         $color5
+
+    .input-select
+        width                    100%
+        padding                  13px
+        background-color         $color2
+        border                   1px solid $color2
+        height                   45px
+        padding                  0 13px
+        cursor                   pointer
+        color                    rgba( $color6, 0.8 )
+        font-size                1.6rem
+        -webkit-appearance       none
+        -webkit-border-radius    0px
+        font-l()
+
+
+    .input-textarea
+        padding                  13px
+        resize                   vertical
+        height                   150px
+
+    .btn-submit
+        width                    100%
+
+    input:-webkit-autofill
+        -webkit-box-shadow       0 0 0 30px $color2 inset

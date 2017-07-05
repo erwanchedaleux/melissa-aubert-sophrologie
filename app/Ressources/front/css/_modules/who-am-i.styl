@@ -1,0 +1,93 @@
+/***************************************/
+
+.sc-whoami
+    position                            relative
+    width                               100%
+    height                              100vh
+    overflow                            hidden
+    background-color                    $color2
+
+.scw-content
+    position                            absolute
+    z-index                             1
+    top                                 50%
+    left                                50%
+    transform                           translate( -50%, -50% )
+    width                               60%
+    min-width                           $innerWidth
+
+.scw-title-1
+    display                             block
+    margin-bottom                       45px
+    font-size                           4.5rem
+    color                               $color3
+    text-align                          center
+    text-transform                      uppercase
+    font-l()
+
+.scw-top
+    clearfix()
+
+.scw-paragraph
+    float                               left
+    width                               70%
+    margin-bottom                       20px
+    color                               $color3
+    font-size                           1.4rem
+    line-height                         1.6
+
+    .lnk
+        color                           $color3
+        font-size                       1.4rem
+        text-decoration                 underline
+        font-b()
+
+        &:hover
+            color                       $color4
+
+.scw-img
+    position                            relative
+    float                               right
+
+    &:before
+        content                         ""
+        display                         block
+        position                        absolute
+        z-index                         -1
+        top                             10px
+        left                            -@top
+        width                           100%
+        height                          100%
+        background-color                $color3
+
+.scw-photo
+    float                               right
+    max-width                           245px
+    max-height                          374px
+    width                               100%
+
+.scw-bottom
+    margin-top                          70px
+    margin-bottom                       40px
+
+.scw-list
+    position                            relative
+    display                             block
+
+    &:before
+        content                         "\f19c"
+        position                        absolute
+        z-index                         -1
+        top                             50%
+        left                            @top
+        transform                       translate( -50%, -50% )
+        font-family                     "FontAwesome"
+        font-size                       15rem
+        color                           rgba( $color5, 0.3 )
+
+.scw-itm
+    color                               $color3
+    font-size                           1.4rem
+    line-height                         1.6
+    text-align                          center
+    font-sb()

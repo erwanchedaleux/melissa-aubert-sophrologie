@@ -214,7 +214,7 @@ module.exports = ( function ( $ ) {
                 element:                        'body',
                 status:                         'start',
                 bgColor:                        'rgba( 255, 255, 255, 0.7 )',
-                barColor:                       '#f59434'
+                barColor:                       '#1b7491'
             } );
 
             setTimeout( function() {
@@ -255,6 +255,10 @@ module.exports = ( function ( $ ) {
 /* global jQuery */
 module.exports = ( function ( $ ) {
 
+    var ANIMATED_CLASS;
+
+    ANIMATED_CLASS                              = 'animated';
+
     function Fullpage( $fullpage ) {
 
         $fullpage.fullpage( {
@@ -262,17 +266,48 @@ module.exports = ( function ( $ ) {
             scrollOverflow:                     true,
             navigation:                         true,
             navigationTooltips:                 [ 'Accueil', 'La Sophrologie', 'Quels accompagnements', 'Qui suis-je ?', 'Contact', '' ],
-            onLeave: function( index ){
-                if ( window.matchMedia('(max-width: 1023px)').matches ) {
-                    if( index === 3 ){
-                        $.fn.fullpage.setAutoScrolling( false );
-                    } else {
-                        $.fn.fullpage.setAutoScrolling( true );
-                    }
-
+            afterLoad: function( anchorLink, index ) {
+                if ( index === 1 ) {
+                    animateHome();
                 }
+
+            },
+            onLeave: function( index, nextIndex, direction ){
+                console.log(index, nextIndex, direction);
             }
         } );
+
+
+        function animateHome() {
+            var $bg, $logo, $title, $text;
+
+            $bg                                 = $( '.sch-background' );
+            $logo                               = $( '.sch-title-1' );
+            $title                              = $( '.sch-title-2' );
+            $text                               = $( '.sch-text' );
+
+            $bg
+                .addClass( ANIMATED_CLASS )
+                .delay( 250 )
+                .queue( function() {
+                    $logo
+                        .addClass( ANIMATED_CLASS )
+                        .delay( 500 )
+                        .queue( function() {
+                            $title
+                                .addClass( ANIMATED_CLASS )
+                                .delay( 500 )
+                                .queue( function() {
+                                    $text
+                                        .addClass( ANIMATED_CLASS )
+                                        .dequeue();
+                                } );
+                        } );
+                } )
+
+
+
+        }
 
     }
 

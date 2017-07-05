@@ -33,7 +33,7 @@ module.exports = ( function ( $ ) {
                 element:                        'body',
                 status:                         'start',
                 bgColor:                        'rgba( 255, 255, 255, 0.7 )',
-                barColor:                       '#f59434'
+                barColor:                       '#1b7491'
             } );
 
             setTimeout( function() {

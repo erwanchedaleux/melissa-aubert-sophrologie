@@ -221,11 +221,13 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                     <strong class="highlight">Devenir sophrologue</strong> était une <strong class="highlight">évidence</strong> pour moi « la relation en face à face et l’aide que l’on peut apporter à l’autre » ont toujours été ma priorité.<br /><br />
                     J’ai été formé à <a href="https://www.sophrologie-formation.fr/" target="_blank" class="lnk" title="Site web de l'IFS">l’Institut de Formation à la Sophrologie</a>, fondé sur des valeurs fortes comme l’éthique, la <strong class="highlight">déontologie</strong> et la <strong class="highlight">qualité</strong>. Je suis rattachée à la Chambre Syndicale de la Sophrologie.
                 </p>
-                <img src="%theme_url%/assets/media/img/photo-melissa-aubert-sophrologie-ls-245.jpg?v=%version%"
-                     srcset="%theme_url%/assets/media/img/photo-melissa-aubert-sophrologie-ls-245.jpg?v=%version% 245w,
-                             %theme_url%/assets/media/img/photo-melissa-aubert-sophrologie-ls-368.jpg?v=%version% 368w"
-                     class="scw-img"
-                     alt="Mélissa Aubert" />
+                <div class="scw-img">
+                    <img src="%theme_url%/assets/media/img/photo-melissa-aubert-sophrologie-ls-245.jpg?v=%version%"
+                         srcset="%theme_url%/assets/media/img/photo-melissa-aubert-sophrologie-ls-245.jpg?v=%version% 245w,
+                                 %theme_url%/assets/media/img/photo-melissa-aubert-sophrologie-ls-368.jpg?v=%version% 368w"
+                         class="scw-photo"
+                         alt="Mélissa Aubert" />
+                </div>
             </div>
             <div class="scw-bottom">
                 <ul class="scw-list">
@@ -247,7 +249,7 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
     </div>
     <div class="scc-content">
         <div class="inner">
-            <h2 class="scw-title-1">Contactez-moi</h2>
+            <h2 class="scc-title-1">Contactez-moi</h2>
             <div class="scc-form">
                 <form class="forms contact-form" role="form" action="" method="post">
                     <div class="fields field-text form-group">
@@ -264,10 +266,10 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                     </div>
                     <div class="fields field-text form-group">
                         <label class="labels labels-placeholder" for="contact_form_phone">Numéro de téléphone</label>
-                        <input type="text" id="contact_form_phone" name="contact_form_phone" value="" class="inputs input-text form-control" data-smk-msg="Veuillez renseigner un numéro de téléphone valide." required>
+                        <input type="tel" id="contact_form_phone" name="contact_form_phone" value="" class="inputs input-text form-control" data-smk-msg="Veuillez renseigner un numéro de téléphone valide." required>
                     </div>
                     <div class="fields field-select form-group">
-                        <label class="labels labels-placeholder" for="contact_form_subject">Sujet</label>
+                        <label class="labels" for="contact_form_subject">Sujet</label>
                         <select id="contact_form_subject" name="contact_form_subject" class="inputs input-select form-control" data-smk-msg="Veuillez sélectionner un sujet." required>
                             <option value="">Sujet</option>
                             <option value="Prise de rendez-vous">Prise de rendez-vous</option>
