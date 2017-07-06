@@ -24,3 +24,17 @@ body
     margin                              0 auto
     padding                             15px 20px
     box-sizing                          border-box
+
+
+/* Mediaqueries Tablet (640px => 1023px) */
+@media all and ( min-width: $smallScreenContentMinWidth ) and ( max-width: $largeScreenContentMinWidth )
+
+    .inner
+        max-width                       $smallScreenContentMaxWidth
+
+
+/* Mediaqueries Mobile (639px) */
+@media all and ( max-width: $smallScreenContentMinWidth )
+
+    .inner
+        padding                         0

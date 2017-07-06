@@ -3,6 +3,10 @@
 {% block global_content %}
 
     <div id="main">
+        {% block header %}
+            {% include 'partials/header.html.twig' %}
+        {% endblock header %}
+        <div class="site-mask">&nbsp;</div>
         {% block content '' %}
     </div>
 

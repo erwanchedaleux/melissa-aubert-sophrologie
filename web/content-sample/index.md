@@ -9,6 +9,7 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
              srcset="%theme_url%/assets/media/img/home-ls-1280.jpg?v=%version% 1280w,
                      %theme_url%/assets/media/img/home-ls-1920.jpg?v=%version% 1920w"
              class="schb-img"
+             sizes="100vw"
              alt="" />
     </div>
     <div class="sch-content">
@@ -17,6 +18,7 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                  srcset="%theme_url%/assets/media/img/logo-melissa-aubert-sophrologie-ls-265.png?v=%version% 265w,
                          %theme_url%/assets/media/img/logo-melissa-aubert-sophrologie-ls-398.png?v=%version% 398w"
                  class="sch-title-1_img"
+                 sizes="265px"
                  alt="Mélissa Aubert Sophrologie" />
         </h1>
         <span class="sch-title-2">Les sens & moi</span>
@@ -95,7 +97,7 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                     </li>
                 </ul>
             </div>
-            <div class="scs-text_hightlight">
+            <div class="scs-text_highlight">
                 <p class="scs-paragraph">
                     Ce suivi thérapeutique donne l’opportunité à chacun de prendre du temps pour soi et ainsi prendre conscience de l’essentiel. Ceci permet au final de se détacher du stress, penser de manière positive et d’avancer plus sereinement.
                 </p>
@@ -121,6 +123,7 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
              srcset="%theme_url%/assets/media/img/accompaniments-ls-1280.jpg?v=%version% 1280w,
                      %theme_url%/assets/media/img/accompaniments-ls-1920.jpg?v=%version% 1920w"
              class="scab-img"
+             sizes="100vw"
              alt="" />
     </div>
     <div class="sca-content">
@@ -226,6 +229,7 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                          srcset="%theme_url%/assets/media/img/photo-melissa-aubert-sophrologie-ls-245.jpg?v=%version% 245w,
                                  %theme_url%/assets/media/img/photo-melissa-aubert-sophrologie-ls-368.jpg?v=%version% 368w"
                          class="scw-photo"
+                         sizes="245px"
                          alt="Mélissa Aubert" />
                 </div>
             </div>
@@ -245,13 +249,14 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
              srcset="%theme_url%/assets/media/img/contact-ls-1280.jpg?v=%version% 1280w,
                      %theme_url%/assets/media/img/contact-ls-1920.jpg?v=%version% 1920w"
              class="sccb-img"
+             sizes="100vw"
              alt="" />
     </div>
     <div class="scc-content">
         <div class="inner">
             <h2 class="scc-title-1">Contactez-moi</h2>
             <div class="scc-form">
-                <form class="forms contact-form" role="form" action="" method="post">
+                <form class="forms contact-form" method="post">
                     <div class="fields field-text form-group">
                         <label class="labels labels-placeholder" for="contact_form_lastname">Nom</label>
                         <input type="text" id="contact_form_lastname" name="contact_form_lastname" value="" class="inputs input-text form-control" data-smk-msg="Veuillez renseigner votre nom." required>

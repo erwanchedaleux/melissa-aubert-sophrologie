@@ -13,7 +13,7 @@
     top                                 50%
     left                                50%
     transform                           translate( -50%, -50% )
-    width                               60%
+    width                               100%
     min-width                           $innerWidth
 
 .scs-title-1
@@ -23,7 +23,12 @@
     color                               $color2
     text-align                          center
     text-transform                      uppercase
+    opacity                             0
     font-l()
+    transition2()
+
+    &.animated
+        opacity                         1
 
 .scs-diagram
     display                             table
@@ -32,6 +37,13 @@
 .scs-diagram_figures
     display                             table-cell
     width                               1%
+    transform                           translateY( -50px )
+    opacity                             0
+    transition2()
+
+    &.animated
+        opacity                         1
+        transform                       translateY( 0 )
 
 .scs-diagram_title
     position                            relative
@@ -85,6 +97,13 @@
 .scs-text
     float                               left
     width                               50%
+    transform                           translateX( 50px )
+    opacity                             0
+    transition2()
+
+    &.animated
+        opacity                         1
+        transform                       translateX( 0 )
 
 .scs-paragraph
     color                               $color5
@@ -111,13 +130,22 @@
         color                           $color5
         margin-left                     -10px
 
-.scs-text_hightlight
+.scs-text_highlight
     position                            relative
     float                               left
     width                               50%
     background-color                    $color2
     box-sizing                          border-box
     padding                             20px
+    opacity                             0
+    transition2()
+
+    &.animated
+        opacity                         1
+
+        &:before
+            opacity                     1
+            transform                   translate( 0, 0 )
 
     &:before
         content                         ""
@@ -129,6 +157,9 @@
         width                           100%
         height                          100%
         background-color                $color4
+        opacity                         0
+        transform                       translate( -10px, -10px )
+        transition4()
 
     .scs-paragraph
         color                           $color3
@@ -140,3 +171,91 @@
     .scs-itm
         &:before
             color                       $color3
+
+
+/* Mediaqueries Tablet (640px => 1023px) */
+@media all and ( min-width: $smallScreenContentMinWidth ) and ( max-width: $largeScreenContentMinWidth )
+
+    .sc-sophrology
+        overflow                        visible
+
+    .scs-diagram_title
+        font-size                       1.6rem
+        width                           80px
+        height                          @width
+        border                          5px solid $color2
+        line-height                     5.2
+
+        &:before
+            top                         0
+            left                        @top
+            border                      5px solid $color4
+
+        &:after
+            bottom                      -30px
+            height                      20px
+
+    .scs-diagram_description
+        margin-top                      30px
+        font-size                       1.2rem
+
+
+    .scs-paragraph
+        font-size                       1.3rem
+
+    .scs-list
+        font-size                       1.3rem
+
+
+/* Mediaqueries Mobile (639px) */
+@media all and ( max-width: $smallScreenContentMinWidth )
+
+    .sc-sophrology
+        overflow                        visible
+
+    .scs-content
+        position                            relative
+        top                                 inherit
+        left                                inherit
+        transform                           inherit
+        width                               90%
+        min-width                           inherit
+        margin                              0 auto
+
+    .scs-title-1
+        display                             block
+        margin-top                          17px
+        margin-left                         20px
+        font-size                           2.3rem
+
+    .scs-diagram_title
+        font-size                       1.6rem
+        width                           80px
+        height                          @width
+        border                          5px solid $color2
+        line-height                     5.2
+
+        &:before
+            top                         0
+            left                        @top
+            border                      5px solid $color4
+
+        &:after
+            bottom                      -30px
+            height                      20px
+
+    .scs-diagram_description
+        margin-top                      30px
+        font-size                       1.2rem
+
+    .scs-text
+    .scs-text_highlight
+        float                           none
+        width                           100%
+        margin-bottom                   30px
+
+    .scs-paragraph
+        font-size                       1.3rem
+
+    .scs-list
+        font-size                       1.3rem

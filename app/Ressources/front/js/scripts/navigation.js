@@ -1,12 +1,12 @@
 /* global jQuery */
 module.exports = ( function ( $ ) {
 
-    function NavigationMobile( $navigationMobile ) {
+    function Navigation( $menu ) {
 
         var NAV_OPENED_CLASS, NO_SCROLL_CLASS, ACTIVE_CLASS,
             $body, $mask, $siteNavigation;
 
-        NAV_OPENED_CLASS                    = 'navigation-mobile-opened';
+        NAV_OPENED_CLASS                    = 'navigation-opened';
         NO_SCROLL_CLASS                     = "no-scroll";
         ACTIVE_CLASS                        = 'active';
 
@@ -20,11 +20,8 @@ module.exports = ( function ( $ ) {
          * @return {void}
          */
         function toggleMobileNavigation() {
-            if ( window.matchMedia('(max-width: 1023px)').matches ) {
-                $body.toggleClass( NAV_OPENED_CLASS ).toggleClass( NO_SCROLL_CLASS );
-                $mask.toggleClass( ACTIVE_CLASS );
-
-            }
+            $body.toggleClass( NAV_OPENED_CLASS ).toggleClass( NO_SCROLL_CLASS );
+            $mask.toggleClass( ACTIVE_CLASS );
 
             if ( $body.hasClass( NAV_OPENED_CLASS ) ) {
                 $.fn.fullpage.setAllowScrolling( false );
@@ -41,7 +38,7 @@ module.exports = ( function ( $ ) {
          * @return {void}
          */
         function removeMobileNavigation( e ) {
-            if ( e.type === 'resize' && window.matchMedia('(max-width: 1023px)').matches ) {
+            if ( e.type === 'resize' ) {
                 return;
             }
 
@@ -52,12 +49,12 @@ module.exports = ( function ( $ ) {
         }
 
 
-        $navigationMobile.on( 'click', toggleMobileNavigation );
+        $menu.on( 'click', toggleMobileNavigation );
         $siteNavigation.on( 'click', '.sn-lnk', removeMobileNavigation );
         $( window ).on( 'resize', removeMobileNavigation );
 
     }
 
-    return NavigationMobile;
+    return Navigation;
 
 }( jQuery ) );

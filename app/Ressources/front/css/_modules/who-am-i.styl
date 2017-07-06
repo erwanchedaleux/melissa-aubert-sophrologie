@@ -24,9 +24,21 @@
     text-align                          center
     text-transform                      uppercase
     font-l()
+    opacity                             0
+    transition2()
+
+    &.animated
+        opacity                         1
 
 .scw-top
     clearfix()
+    opacity                             0
+    transform                           translateY( -30px )
+    transition2()
+
+    &.animated
+        opacity                         1
+        transform                       translateY( 0 )
 
 .scw-paragraph
     float                               left
@@ -69,6 +81,13 @@
 .scw-bottom
     margin-top                          70px
     margin-bottom                       40px
+    opacity                             0
+    transform                           translateY( 30px )
+    transition2()
+
+    &.animated
+        opacity                         1
+        transform                       translateY( 0 )
 
 .scw-list
     position                            relative

@@ -6,12 +6,12 @@ module.exports = ( function ( $ ) {
         var NavigationMobile,Fullpage, Tabs, Form,
             $navigationMobile, $fullpage, $forms, $tabs;
 
-        NavigationMobile                        = require( '../navigation-mobile.js' );
+        NavigationMobile                        = require( '../navigation.js' );
         Fullpage                                = require( '../fullpage.js' );
         Tabs                                    = require( '../tabs.js' );
         Form                                    = require( '../form/validation.js' );
 
-        $navigationMobile                       = $( '.site-navigation-mobile' );
+        $navigationMobile                       = $( '.menu-burger' );
         $fullpage                               = $( '.fullpage' );
         $tabs                                   = $( '.tabs' );
         $forms                                  = $( '.forms' );
