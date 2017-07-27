@@ -1,29 +1,8 @@
-@font-face {
-  font-family: 'Champagne et Limousines';
-  font-display: optional;
-  src: url("../media/fonts/champagne-limousines-webfont.woff2") format('woff2'), url("../media/fonts/champagne-limousines-webfont.woff") format('woff'), url("../media/fonts/champagne-limousines-webfont.ttf") format('truetype');
-  font-style: normal;
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Champagne et Limousines';
-  font-display: optional;
-  src: url("../media/fonts/champagne-limousines-italic-webfont.woff2") format('woff2'), url("../media/fonts/champagne-limousines-italic-webfont.woff") format('woff'), url("../media/fonts/champagne-limousines-italic-webfont.ttf") format('truetype');
-  font-style: italic;
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Champagne et Limousines';
-  font-display: optional;
-  src: url("../media/fonts/champagne-limousines-bold-webfont.woff2") format('woff2'), url("../media/fonts/champagne-limousines-bold-webfont.woff") format('woff'), url("../media/fonts/champagne-limousines-bold-webfont.ttf") format('truetype');
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'Champagne et Limousines';
-  font-display: optional;
-  src: url("../media/fonts/champagne-limousines-bold-italic-webfont.woff2") format('woff2'), url("../media/fonts/champagne-limousines-bold-italic-webfont.woff") format('woff'), url("../media/fonts/champagne-limousines-bold-italic-webfont.ttf") format('truetype');
-  font-style: italic;
-  font-weight: 700;
-}
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700,800");
+/*!
+ *  Erwan Chedaleux
+ *  http://www.erwan-chedaleux.fr
+ *  @version: 0.2.0
+ *  
+*/
+
+@font-face{font-family:'Champagne et Limousines';font-display:optional;src:url(themes/default/assets/media/fonts/champagne-limousines-webfont.woff2) format('woff2'),url(themes/default/assets/media/fonts/champagne-limousines-webfont.woff) format('woff'),url(themes/default/assets/media/fonts/champagne-limousines-webfont.ttf) format('truetype');font-style:normal;font-weight:400}@font-face{font-family:'Champagne et Limousines';font-display:optional;src:url(themes/default/assets/media/fonts/champagne-limousines-italic-webfont.woff2) format('woff2'),url(themes/default/assets/media/fonts/champagne-limousines-italic-webfont.woff) format('woff'),url(themes/default/assets/media/fonts/champagne-limousines-italic-webfont.ttf) format('truetype');font-style:italic;font-weight:400}@font-face{font-family:'Champagne et Limousines';font-display:optional;src:url(themes/default/assets/media/fonts/champagne-limousines-bold-webfont.woff2) format('woff2'),url(themes/default/assets/media/fonts/champagne-limousines-bold-webfont.woff) format('woff'),url(themes/default/assets/media/fonts/champagne-limousines-bold-webfont.ttf) format('truetype');font-style:normal;font-weight:700}@font-face{font-family:'Champagne et Limousines';font-display:optional;src:url(themes/default/assets/media/fonts/champagne-limousines-bold-italic-webfont.woff2) format('woff2'),url(themes/default/assets/media/fonts/champagne-limousines-bold-italic-webfont.woff) format('woff'),url(themes/default/assets/media/fonts/champagne-limousines-bold-italic-webfont.ttf) format('truetype');font-style:italic;font-weight:700}

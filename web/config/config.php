@@ -12,7 +12,7 @@
  * BASIC
  */
 $config['site_title'] = 'Mélissa Aubert';                  // Site title
-// $config['base_url'] = 'http://www.melissa-aubert-sophrologie.fr/';      // Override base URL (e.g. http://example.com)
+// $config['base_url'] = 'http://www.melissa-aubert-sophrologie.fr/';      // Override base URL (e.g. http://example.com) [/melissa-aubert-sophrologie/]
 $config['rewrite_url'] = true;                              // A boolean indicating forced URL rewriting
 
 /*
@@ -21,7 +21,7 @@ $config['rewrite_url'] = true;                              // A boolean indicat
  $config['twig_config'] = array(              // Twig settings
      'cache' => false,                        // To enable Twig caching change this to a path to a writable directory
      'autoescape' => false,                   // Auto-escape Twig vars
-     'debug' => true                          // Enable Twig debug
+     'debug' => false                          // Enable Twig debug
  );
 
 /*
