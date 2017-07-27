@@ -132,3 +132,50 @@
     color                               $color3
     font-size                           1.3rem
     line-height                         1.4
+
+
+/* Mediaqueries Mobile (639px) */
+@media all and ( max-width: $smallScreenContentMinWidth )
+
+    .sc-accompaniments
+        overflow                        visible
+
+    .sca-background
+        position                        absolute
+        height                          100%
+
+        &:after
+            content                     ""
+            position                    absolute
+            top                         0
+            left                        0
+            width                       100%
+            height                      @width
+            background-color            rgba( $color1, 0.5 )
+
+    .scab-img
+        min-width                       inherit
+        width                           auto
+        height                          100%
+
+    .sca-content
+        position                        relative
+        top                             inherit
+        left                            inherit
+        transform                       inherit
+        width                           90%
+        min-width                       inherit
+        margin                          0 auto
+
+    .sca-title-1
+        display                         block
+        margin-top                      21px
+        margin-left                     50px
+        font-size                       1.7rem
+        text-shadow                     0 2px 5px $color1
+
+    .sca-itm
+        font-size                       1.3rem
+
+    .sca-text
+        column-count                    1

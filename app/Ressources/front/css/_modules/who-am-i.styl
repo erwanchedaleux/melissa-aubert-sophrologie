@@ -79,7 +79,7 @@
     width                               100%
 
 .scw-bottom
-    margin-top                          70px
+    margin-top                          50px
     margin-bottom                       40px
     opacity                             0
     transform                           translateY( 30px )
@@ -110,3 +110,42 @@
     line-height                         1.6
     text-align                          center
     font-sb()
+
+
+/* Mediaqueries Mobile (639px) */
+@media all and ( max-width: $smallScreenContentMinWidth )
+
+    .sc-whoami
+        overflow                        visible
+
+    .scw-content
+        position                        relative
+        top                             inherit
+        left                            inherit
+        transform                       inherit
+        width                           90%
+        min-width                       inherit
+        margin                          0 auto
+
+    .scw-title-1
+        display                         block
+        margin-top                      17px
+        margin-left                     20px
+        font-size                       2.3rem
+
+
+    .scw-paragraph
+        float                           none
+        width                           100%
+
+    .scw-img
+        float                           none
+        width                           90%
+        margin                          0 auto
+
+    .scw-photo
+        float                           none
+        max-width                       inherit
+
+    .scw-bottom
+        margin-bottom                   80px

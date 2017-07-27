@@ -134,6 +134,16 @@ ul {
   .sn-lnk {
     font-size: 1.5rem;
   }
+  .menu-burger {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  .menu-burger.displayed {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 html,
 body,

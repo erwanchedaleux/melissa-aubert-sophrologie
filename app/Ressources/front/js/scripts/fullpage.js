@@ -1,10 +1,18 @@
 /* global jQuery */
 module.exports = ( function ( $ ) {
 
-    var ANIMATED_CLASS;
+    var ANIMATED_CLASS, ALT_CLASS, IDLE_STATE, LOADED_STATE,
+        menuOffsetTop, menuOffsetBottom, menuBurgerState;
 
     ANIMATED_CLASS                              = 'animated';
     ALT_CLASS                                   = 'alt';
+    DISPLAYED_CLASS                             = 'displayed';
+    IDLE_STATE                                  = 'idle';
+    LOADED_STATE                                = 'loaded';
+
+    menuOffsetTop                               = 0;
+    menuOffsetBottom                            = 0;
+    menuBurgerState                             = IDLE_STATE;
 
 
     function Fullpage( $fullpage ) {
@@ -77,6 +85,11 @@ module.exports = ( function ( $ ) {
             $text                               = $( '.sch-text' );
             $scroll                             = $( '.sch-scroll-bottom' );
 
+            menuOffsetTop                       = 0;
+            menuOffsetBottom                    = parseInt( $( window ).height(), 10 );
+
+            $menuBurger.addClass( DISPLAYED_CLASS );
+
             $bg
                 .addClass( ANIMATED_CLASS )
                 .delay( 250 )
@@ -118,6 +131,9 @@ module.exports = ( function ( $ ) {
             $diagramChildren                    = $diagram.children();
             $text                               = $( '.scs-text' );
             $textHighlight                      = $( '.scs-text_highlight' );
+
+            menuOffsetTop                       = 0;
+            menuOffsetBottom                    = parseInt( $title.offset().top + $title.height() - 20, 10 );
 
             $title
                 .addClass( ANIMATED_CLASS )
@@ -164,6 +180,9 @@ module.exports = ( function ( $ ) {
             $title                              = $( '.sca-title-1' );
             $tabs                               = $( '.sca-tabs' );
 
+            menuOffsetTop                       = parseInt( $title.offset().top - 60, 10 );
+            menuOffsetBottom                    = parseInt( $title.offset().top + $title.height() - 20, 10 );
+
             $bg
                 .addClass( ANIMATED_CLASS )
                 .delay( 250 )
@@ -192,6 +211,9 @@ module.exports = ( function ( $ ) {
             $title                              = $( '.scw-title-1' );
             $top                                = $( '.scw-top' );
             $bottom                             = $( '.scw-bottom' );
+
+            menuOffsetTop                       = parseInt( $title.offset().top - 60, 10 );
+            menuOffsetBottom                    = parseInt( $title.offset().top + $title.height() - 20, 10 );
 
             $title
                 .addClass( ANIMATED_CLASS )
@@ -223,6 +245,9 @@ module.exports = ( function ( $ ) {
             $title                              = $( '.scc-title-1' );
             $form                               = $( '.scc-form' );
 
+            menuOffsetTop                       = parseInt( $title.offset().top - 60, 10 );
+            menuOffsetBottom                    = parseInt( $title.offset().top + $title.height() - 20, 10 );
+
             $bg
                 .addClass( ANIMATED_CLASS )
                 .delay( 250 )
@@ -240,6 +265,43 @@ module.exports = ( function ( $ ) {
 
                 } );
 
+        }
+
+        /**
+         * [onScrollHandler description]
+         * @return {[type]} [description]
+         */
+        function onScrollHandler() {
+            if ( menuBurgerState === LOADED_STATE ) {
+                return;
+            }
+
+            if ( $( window ).scrollTop() >= menuOffsetTop && $( window ).scrollTop() <= menuOffsetBottom ) {
+                menuBurgerState                 = LOADED_STATE;
+
+                $menuBurger
+                    .addClass( DISPLAYED_CLASS )
+                    .delay( 250 )
+                    .queue( function() {
+                        menuBurgerState         = IDLE_STATE;
+                        $menuBurger.dequeue();
+                    } );
+
+            } else {
+                $menuBurger
+                    .removeClass( DISPLAYED_CLASS )
+                    .delay( 250 )
+                    .queue( function() {
+                        menuBurgerState         = IDLE_STATE;
+                        $menuBurger.dequeue();
+                    } );
+            }
+
+        }
+
+
+        if ( window.matchMedia('(max-width: 639px)').matches ) {
+            $( window ).on ( 'scroll', onScrollHandler );
         }
 
     }

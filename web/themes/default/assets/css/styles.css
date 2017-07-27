@@ -360,12 +360,12 @@ legend {
   font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto;
-  border: 15px solid #fff;
+  border: 10px solid #fff;
   border-radius: 100%;
-  line-height: 7.5;
+  line-height: 6.5;
   text-align: center;
   font-weight: 700;
 }
@@ -374,11 +374,11 @@ legend {
   display: block;
   position: absolute;
   z-index: -1;
-  top: -5px;
-  left: -5px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  border: 15px solid #124b5e;
+  border: 10px solid #124b5e;
   border-radius: 100%;
 }
 .scs-diagram_title:after {
@@ -398,7 +398,7 @@ legend {
 .scs-diagram_description {
   display: block;
   margin-top: 50px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.3;
   color: #fff;
   text-align: center;
@@ -419,15 +419,15 @@ legend {
 }
 .scs-paragraph {
   color: #bfd8e0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   padding-right: 20px;
 }
 .scs-list {
   margin-top: 10px;
   color: #bfd8e0;
-  font-size: 1.6rem;
-  line-height: 1.4;
+  font-size: 1.4rem;
+  line-height: 1.3;
   padding-right: 20px;
 }
 .scs-itm {
@@ -537,9 +537,9 @@ legend {
     font-size: 2.3rem;
   }
   .scs-diagram_title {
-    font-size: 1.6rem;
-    width: 80px;
-    height: 80px;
+    font-size: 1.4rem;
+    width: 70px;
+    height: 70px;
     border: 5px solid #fff;
     line-height: 5.2;
   }
@@ -710,6 +710,54 @@ legend {
   font-size: 1.3rem;
   line-height: 1.4;
 }
+@media all and (max-width: 639px) {
+  .sc-accompaniments {
+    overflow: visible;
+  }
+  .sca-background {
+    position: absolute;
+    height: 100%;
+  }
+  .sca-background:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .scab-img {
+    min-width: inherit;
+    width: auto;
+    height: 100%;
+  }
+  .sca-content {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    -webkit-transform: inherit;
+            transform: inherit;
+    width: 90%;
+    min-width: inherit;
+    margin: 0 auto;
+  }
+  .sca-title-1 {
+    display: block;
+    margin-top: 21px;
+    margin-left: 50px;
+    font-size: 1.7rem;
+    text-shadow: 0 2px 5px #000;
+  }
+  .sca-itm {
+    font-size: 1.3rem;
+  }
+  .sca-text {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
+}
 .sc-whoami {
   position: relative;
   width: 100%;
@@ -799,7 +847,7 @@ legend {
   width: 100%;
 }
 .scw-bottom {
-  margin-top: 70px;
+  margin-top: 50px;
   margin-bottom: 40px;
   opacity: 0;
   -webkit-transform: translateY(30px);
@@ -833,6 +881,43 @@ legend {
   line-height: 1.6;
   text-align: center;
   font-weight: 600;
+}
+@media all and (max-width: 639px) {
+  .sc-whoami {
+    overflow: visible;
+  }
+  .scw-content {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    -webkit-transform: inherit;
+            transform: inherit;
+    width: 90%;
+    min-width: inherit;
+    margin: 0 auto;
+  }
+  .scw-title-1 {
+    display: block;
+    margin-top: 17px;
+    margin-left: 20px;
+    font-size: 2.3rem;
+  }
+  .scw-paragraph {
+    float: none;
+    width: 100%;
+  }
+  .scw-img {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .scw-photo {
+    float: none;
+    max-width: inherit;
+  }
+  .scw-bottom {
+    margin-bottom: 80px;
+  }
 }
 .sc-contact {
   position: relative;
@@ -892,6 +977,37 @@ legend {
 .contact-form {
   width: 100%;
 }
+@media all and (max-width: 639px) {
+  .sc-contact {
+    overflow: visible;
+  }
+  .scc-background {
+    position: absolute;
+    height: 100%;
+    left: -100%;
+  }
+  .sccb-img {
+    min-width: inherit;
+    width: auto;
+    height: 100%;
+  }
+  .scc-content {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    -webkit-transform: inherit;
+            transform: inherit;
+    width: 90%;
+    min-width: inherit;
+    margin: 0 auto;
+  }
+  .scc-title-1 {
+    display: block;
+    margin-top: 17px;
+    margin-left: 20px;
+    font-size: 2.3rem;
+  }
+}
 .site-footer {
   background-color: #1b7491;
   padding: 25px 0;
@@ -926,4 +1042,16 @@ legend {
 }
 .sf-lnk:hover {
   text-decoration: underline;
+}
+@media all and (max-width: 639px) {
+  .sf-copyright {
+    font-size: 1.2rem;
+    padding: 0 0 15px 0;
+  }
+  .sf-lnks {
+    font-size: 1.2rem;
+  }
+  .sf-lnk:nth-child(1):before {
+    content: none;
+  }
 }

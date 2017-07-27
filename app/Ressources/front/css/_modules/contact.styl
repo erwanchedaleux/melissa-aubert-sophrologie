@@ -52,3 +52,35 @@
 
 .contact-form
     width                               100%
+
+
+/* Mediaqueries Mobile (639px) */
+@media all and ( max-width: $smallScreenContentMinWidth )
+
+    .sc-contact
+        overflow                        visible
+
+    .scc-background
+        position                        absolute
+        height                          100%
+        left                            -100%
+
+    .sccb-img
+        min-width                       inherit
+        width                           auto
+        height                          100%
+
+    .scc-content
+        position                        relative
+        top                             inherit
+        left                            inherit
+        transform                       inherit
+        width                           90%
+        min-width                       inherit
+        margin                          0 auto
+
+    .scc-title-1
+        display                         block
+        margin-top                      17px
+        margin-left                     20px
+        font-size                       2.3rem
