@@ -75,8 +75,11 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                 <p class="scs-paragraph">
                     La <strong class="highlight">sophrologie</strong> est une technique <strong class="highlight">psychocorporelle de développement personnel</strong> qui permet de retrouver une harmonie entre le <strong class="highlight">corps</strong> et le <strong class="highlight">mental</strong>. Cette thérapie douce et brève permet de développer la conscience grâce à l’<strong class="highlight">écoute de ses ressentis</strong>.
                 </p>
-                <ul class="scs-list">
+                <br />
+                <p class="scs-paragraph">
                     Plus que de la <strong class="highlight">relaxation</strong>, la sophrologie est une méthode axée sur la <strong class="highlight">recherche personnelle</strong> à savoir :
+                </p>
+                <ul class="scs-list">
     	            <li class="scs-itm">
                         L’écoute de soi
                     </li>
@@ -101,8 +104,11 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                 <p class="scs-paragraph">
                     Ce suivi thérapeutique donne l’opportunité à chacun de prendre du temps pour soi et ainsi prendre conscience de l’essentiel. Ceci permet au final de se détacher du stress, penser de manière positive et d’avancer plus sereinement.
                 </p>
-                <ul class="scs-list">
+                <br />
+                <p class="scs-paragraph">
                     <strong class="highlight">Les moyens pour y parvenir :</strong>
+                </p>
+                <ul class="scs-list">
     	            <li class="scs-itm">
                         Exercices de respiration contrôlée
                     </li>
@@ -145,8 +151,10 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                 <div class="sca-tab" id="private">
                     <h3 class="sca-title-2">Domaines d'application</h3>
                     <div class="sca-text">
-                        <ul class="sca-tab_list">
+                        <p class="sca-paragraph">
                             <strong class="highlight">Amélioration du quotidien :</strong>
+                        </p>
+                        <ul class="sca-tab_list">
                             <li class="sca-tab_itm">
                                 Gérer un stress, une anxiété
                             </li>
@@ -166,8 +174,10 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                                 Renforcer l’estime de soi
                             </li>
                         </ul>
-                        <ul class="sca-tab_list">
+                        <p class="sca-paragraph">
                             <strong class="highlight">Préparation mentale :</strong>
+                        </p>
+                        <ul class="sca-tab_list">
                             <li class="sca-tab_itm">
                                 Optimiser son potentiel pour affronter un événement précis
                             </li>
@@ -178,8 +188,10 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                                 Accouchement, permis de conduire, examens médicaux ou scolaires, compétitions, entretiens professionnels, ect.
                             </li>
                         </ul>
-                        <ul class="sca-tab_list">
+                        <p class="sca-paragraph">
                             <strong class="highlight">Accompagnement d’un traitement médical :</strong>
+                        </p>
+                        <ul class="sca-tab_list">
                             <li class="sca-tab_itm">
                                 Gérer ses douleurs
                             </li>
@@ -190,8 +202,10 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                                 Développer un potentiel physique et mental face à la maladie
                             </li>
                         </ul>
-                        <ul class="sca-tab_list">
+                        <p class="sca-paragraph">
                             <strong class="highlight">Accompagnement de comportement pathologique :</strong>
+                        </p>
+                        <ul class="sca-tab_list">
                             <li class="sca-tab_itm">
                                 Contrôler ses pulsions ou phobies
                             </li>

@@ -1,7 +1,7 @@
 /* global jQuery */
 module.exports = ( function ( $ ) {
 
-    var ANIMATED_CLASS, ALT_CLASS, IDLE_STATE, LOADED_STATE, DISPLAYED_CLASS, 
+    var ANIMATED_CLASS, ALT_CLASS, IDLE_STATE, LOADED_STATE, DISPLAYED_CLASS,
         menuOffsetTop, menuOffsetBottom, menuBurgerState;
 
     ANIMATED_CLASS                              = 'animated';
