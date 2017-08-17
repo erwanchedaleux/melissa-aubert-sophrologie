@@ -1,6 +1,7 @@
 ---
 Title: Accueil
 description: Accompagnement complémentaire, adapté à la personnalité de chacun et à ses besoins
+Robots: noindex,nofollow
 ---
 
 <div class="sc-home section fp-noscroll active">
@@ -181,11 +182,8 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                             <li class="sca-tab_itm">
                                 Optimiser son potentiel pour affronter un événement précis
                             </li>
-                            <li class="sca-tab_itm">
-                                Optimiser son potentiel pour affronter un événement précis
-                            </li>
                             <li class="sca-tab_itm highlight">
-                                Accouchement, permis de conduire, examens médicaux ou scolaires, compétitions, entretiens professionnels, ect.
+                                Accouchement, permis de conduire, examens médicaux ou scolaires, compétitions, entretiens professionnels, etc.
                             </li>
                         </ul>
                         <p class="sca-paragraph">
@@ -210,7 +208,7 @@ description: Accompagnement complémentaire, adapté à la personnalité de chac
                                 Contrôler ses pulsions ou phobies
                             </li>
                             <li class="sca-tab_itm highlight">
-                                Drogues, alcool, médicaments, phobie des transports, ect.
+                                Drogues, alcool, médicaments, phobie des transports, etc.
                             </li>
                         </ul>
                     </div>
