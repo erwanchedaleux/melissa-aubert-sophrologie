@@ -22,6 +22,8 @@ echo $pico->run();
 $lastname       = $_POST['contact_form_lastname'];
 $firstname      = $_POST['contact_form_firstname'];
 $email          = $_POST['contact_form_email'];
+$phone          = $_POST['contact_form_phone'];
+$subject        = $_POST['contact_form_subject'];
 $message        = $_POST['contact_form_message'];
 
 if(isset($lastname) && !empty($lastname) &&
@@ -32,17 +34,17 @@ isset($message) && !empty($message)) {
 
     $mailFrom       = 'contact@melissa-aubert-sophrologie.fr';
     $mailTo         = 'sophrologie.ma@gmail.com';
-    $password       = 'XXXXXXXXXXX';
+    $password       = 'Xxxxxxxxxyy';
 
     $swiftTransport = Swift_SmtpTransport::newInstance('SSL0.OVH.NET', 587) ->setUsername($mailFrom) ->setPassword($password);
 
 
     // send email
     $swiftMessage   = Swift_Message::newInstance();
-    $swiftMessage   ->setSubject('Contact depuis mon portfolio')
-                    ->setFrom(array($mailFrom => 'Contact - Site'))
+    $swiftMessage   ->setSubject('Contact depuis le site melissa-aubert-sophrologie.fr')
+                    ->setFrom(array($mailFrom => 'Contact - Melissa Aubert Sophrologie'))
                     ->setTo($mailTo)
-                    ->setBody( '<strong>Nom et prénom :</strong> '.$firstname.' '.$lastname.' <br />'. '<strong>E-mail :</strong> '.$email.' <br /><strong>Envoyé le</strong> '.date('d/m/Y', time()).'<br /><br /><strong>Message :</strong><br />'. nl2br($message), 'text/html' ) ;
+                    ->setBody( '<strong>Nom et prénom :</strong> '.$firstname.' '.$lastname.' <br />'. '<strong>E-mail :</strong> '.$email.' <br /><strong>Numéro de téléphone :</strong> '.$phone.' <br /><strong>Envoyé le</strong> '.date('d/m/Y', time()).'<br /><br /><strong>Sujet :</strong><br />'.$subject.'<br /><strong>Message :</strong><br />'. nl2br($message), 'text/html' ) ;
     $swiftMailer    = Swift_Mailer::newInstance($swiftTransport);
     $result         = $swiftMailer->send($swiftMessage);
 
