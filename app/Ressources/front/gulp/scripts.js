@@ -114,6 +114,7 @@ module.exports = function( gulp, pkg, config ) {
     gulp.task( 'concatInlineJSProd',  function() {
         return gulp
                 .src( [
+                    config.path.resources.js + 'config/check-version.js',
                     config.path.resources.js + 'vendor/loadcss/loadCSS.js',
                     config.path.resources.js + 'vendor/loadcss/cssrelpreload.js',
                     config.path.resources.js + 'config/starter.js'

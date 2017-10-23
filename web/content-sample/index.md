@@ -46,9 +46,11 @@ Robots: noindex,nofollow
                         sos
                     </dt>
                     <dd class="scs-diagram_description">
-                        Paix<br />
-                        Harmonie<br />
-                        Sérénité
+                        <h3>
+                            Paix<br />
+                            Harmonie<br />
+                            Sérénité
+                        </h3>
                     </dd>
                 </dl>
                 <dl class="scs-diagram_figures">
@@ -56,9 +58,11 @@ Robots: noindex,nofollow
                         phren
                     </dt>
                     <dd class="scs-diagram_description">
-                        Esprit<br />
-                        Conscience<br />
-                        Cerveau
+                        <h3>
+                            Esprit<br />
+                            Conscience<br />
+                            Cerveau
+                        </h3>
                     </dd>
                 </dl>
                 <dl class="scs-diagram_figures">
@@ -66,9 +70,11 @@ Robots: noindex,nofollow
                         logos
                     </dt>
                     <dd class="scs-diagram_description">
-                        Discours<br />
-                        Science<br />
-                        Étude
+                        <h3>
+                            Discours<br />
+                            Science<br />
+                            Étude
+                        </h3>
                     </dd>
                 </dl>
             </div>
@@ -150,11 +156,11 @@ Robots: noindex,nofollow
                     </li>
                 </ul>
                 <div class="sca-tab" id="private">
-                    <h3 class="sca-title-2">Domaines d'application</h3>
+                    <div class="sca-title-2">Domaines d'application</div>
                     <div class="sca-text">
-                        <p class="sca-paragraph">
+                        <h3 class="sca-paragraph">
                             <strong class="highlight">Amélioration du quotidien :</strong>
-                        </p>
+                        </h3>
                         <ul class="sca-tab_list">
                             <li class="sca-tab_itm">
                                 Gérer un stress, une anxiété
@@ -175,9 +181,9 @@ Robots: noindex,nofollow
                                 Renforcer l’estime de soi
                             </li>
                         </ul>
-                        <p class="sca-paragraph">
+                        <h3 class="sca-paragraph">
                             <strong class="highlight">Préparation mentale :</strong>
-                        </p>
+                        </h3>
                         <ul class="sca-tab_list">
                             <li class="sca-tab_itm">
                                 Optimiser son potentiel pour affronter un événement précis
@@ -186,9 +192,9 @@ Robots: noindex,nofollow
                                 Accouchement, permis de conduire, examens médicaux ou scolaires, compétitions, entretiens professionnels, etc.
                             </li>
                         </ul>
-                        <p class="sca-paragraph">
+                        <h3 class="sca-paragraph">
                             <strong class="highlight">Accompagnement d’un traitement médical :</strong>
-                        </p>
+                        </h3>
                         <ul class="sca-tab_list">
                             <li class="sca-tab_itm">
                                 Gérer ses douleurs
@@ -200,9 +206,9 @@ Robots: noindex,nofollow
                                 Développer un potentiel physique et mental face à la maladie
                             </li>
                         </ul>
-                        <p class="sca-paragraph">
+                        <h3 class="sca-paragraph">
                             <strong class="highlight">Accompagnement de comportement pathologique :</strong>
-                        </p>
+                        </h3>
                         <ul class="sca-tab_list">
                             <li class="sca-tab_itm">
                                 Contrôler ses pulsions ou phobies
@@ -214,9 +220,36 @@ Robots: noindex,nofollow
                     </div>
                 </div>
                 <div class="sca-tab" id="company">
+                    <div class="sca-title-2">Domaines d'application</div>
                     <div class="sca-text">
                         <p class="sca-paragraph">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <strong class="highlight">Amélioration du quotidien :</strong>
+                        </p>
+                        <ul class="sca-tab_list">
+                            <li class="sca-tab_itm">
+                                Optmisation de la concentration et de la mémoire
+                            </li>
+                            <li class="sca-tab_itm">
+                                 Confiance en soi
+                            </li>
+                            <li class="sca-tab_itm">
+                                 Stimuler la créativité
+                            </li>
+                            <li class="sca-tab_itm">
+                                Booster les capacités des employés
+                            </li>
+                            <li class="sca-tab_itm">
+                                Gérer la prise de parole en public
+                            </li>
+                            <li class="sca-tab_itm">
+                                Prévenir et contrôler le stress lié au travail
+                            </li>
+                            <li class="sca-tab_itm">
+                                Dynamiser les équipes
+                            </li>
+                        </ul>
+                        <p class="sca-paragraph">
+                            La sophrologie en entreprise est un <strong class="highlight">bon outil pour une gestion optimale du stress</strong> et permet d’assurer une <strong class="highlight">performance et une productivité optimale</strong>, bénéfique à l’entreprise et aux collaborateurs. Elle permet à chaque collaborateurs de découvrir <strong class="highlight">son propre seuil de tolérance</strong> et lui donne les outils nécessaires pour éviter de passer <strong class="highlight">le point de basculement</strong> (Burn-out, épuisement professionnel, manque de confiance, accumulation du stress...)
                         </p>
                     </div>
                 </div>
@@ -246,11 +279,11 @@ Robots: noindex,nofollow
                 </div>
             </div>
             <div class="scw-bottom">
-                <ul class="scw-list">
-                    <li class="scw-itm">Je suis certifiée RNCP, niveau III de qualification reconnu par l’Etat (CNCP)</li>
-                    <li class="scw-itm">Je suis adhérente à la Chambre Syndicale de la Sophrologie</li>
-                    <li class="scw-itm">J’exerce dans le respect du code déontologique de ma profession et je suis soumise au secret professionnel</li>
-                </ul>
+                <div class="scw-list">
+                    <h3 class="scw-itm">Je suis certifiée RNCP, niveau III de qualification reconnu par l’Etat (CNCP)</h3>
+                    <h3 class="scw-itm">Je suis adhérente à la Chambre Syndicale de la Sophrologie</h3>
+                    <h3 class="scw-itm">J’exerce dans le respect du code déontologique de ma profession et je suis soumise au secret professionnel</h3>
+                </div>
             </div>
         </div>
     </div>
